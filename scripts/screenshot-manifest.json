@@ -1,0 +1,381 @@
+{
+  "domain": "code-quality",
+  "scannerRepo": "code-quality-scan-demo-app",
+  "workshopRepo": "code-quality-scan-workshop",
+  "gitHubOrg": "devopsabcs-engineering",
+  "adoOrg": "MngEnvMCAP675646",
+  "adoProject": "Agentic Accelerator Framework",
+  "screenshots": [
+    {
+      "lab": "00",
+      "name": "lab-00-node-version",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "node --version; npm --version"
+    },
+    {
+      "lab": "00",
+      "name": "lab-00-python-version",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "python --version; pip --version"
+    },
+    {
+      "lab": "00",
+      "name": "lab-00-dotnet-version",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "dotnet --version"
+    },
+    {
+      "lab": "00",
+      "name": "lab-00-java-version",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "java --version"
+    },
+    {
+      "lab": "00",
+      "name": "lab-00-go-version",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "go version"
+    },
+    {
+      "lab": "00",
+      "name": "lab-00-docker-version",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "docker --version"
+    },
+    {
+      "lab": "00",
+      "name": "lab-00-clone-repo",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "git clone https://github.com/devopsabcs-engineering/code-quality-scan-demo-app.git; Get-ChildItem code-quality-scan-demo-app -Directory | Select-Object Name"
+    },
+    {
+      "lab": "00",
+      "name": "lab-00-tools-installed",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "Write-Host \"ESLint:        $(eslint --version)\"; Write-Host \"Ruff:          $(ruff --version)\"; Write-Host \"jscpd:         $(jscpd --version)\"; Write-Host \"Lizard:        $(lizard --version)\"; Write-Host \"golangci-lint: $(golangci-lint --version)\""
+    },
+    {
+      "lab": "01",
+      "name": "lab-01-repo-structure",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "Get-ChildItem -Directory | Format-Table Name, LastWriteTime",
+      "workingDir": "demo-app"
+    },
+    {
+      "lab": "01",
+      "name": "lab-01-app-001-running",
+      "phase": 2,
+      "method": "playwright-navigate",
+      "url": "http://localhost:3000"
+    },
+    {
+      "lab": "01",
+      "name": "lab-01-app-002-running",
+      "phase": 2,
+      "method": "playwright-navigate",
+      "url": "http://localhost:5000"
+    },
+    {
+      "lab": "01",
+      "name": "lab-01-app-003-running",
+      "phase": 2,
+      "method": "playwright-navigate",
+      "url": "http://localhost:8080"
+    },
+    {
+      "lab": "01",
+      "name": "lab-01-app-004-running",
+      "phase": 2,
+      "method": "playwright-navigate",
+      "url": "http://localhost:8080"
+    },
+    {
+      "lab": "01",
+      "name": "lab-01-app-005-running",
+      "phase": 2,
+      "method": "playwright-navigate",
+      "url": "http://localhost:8080"
+    },
+    {
+      "lab": "01",
+      "name": "lab-01-violations-preview",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "Get-Content cq-demo-app-001/src/utils/helpers.ts | Select-Object -First 40",
+      "workingDir": "demo-app"
+    },
+    {
+      "lab": "02",
+      "name": "lab-02-eslint-output",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "npx eslint src/ --format stylish | Select-Object -First 40",
+      "workingDir": "demo-app/cq-demo-app-001"
+    },
+    {
+      "lab": "02",
+      "name": "lab-02-ruff-output",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "ruff check src/ | Select-Object -First 40",
+      "workingDir": "demo-app/cq-demo-app-002"
+    },
+    {
+      "lab": "02",
+      "name": "lab-02-dotnet-analyzers",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "dotnet build 2>&1 | Select-String 'warning CA|error CA' | Select-Object -First 20",
+      "workingDir": "demo-app/cq-demo-app-003"
+    },
+    {
+      "lab": "02",
+      "name": "lab-02-checkstyle-output",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "mvn checkstyle:check 2>&1 | Select-Object -Last 30",
+      "workingDir": "demo-app/cq-demo-app-004"
+    },
+    {
+      "lab": "02",
+      "name": "lab-02-golangci-lint-output",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "golangci-lint run ./... | Select-Object -First 30",
+      "workingDir": "demo-app/cq-demo-app-005"
+    },
+    {
+      "lab": "02",
+      "name": "lab-02-sarif-structure",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "Get-Content eslint-results.sarif | ConvertFrom-Json | ConvertTo-Json -Depth 4 | Select-Object -First 40",
+      "workingDir": "demo-app/cq-demo-app-001"
+    },
+    {
+      "lab": "02",
+      "name": "lab-02-eslint-sarif",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "Get-Content eslint-results.sarif | ConvertFrom-Json | Select-Object -ExpandProperty runs | Select-Object -ExpandProperty results | Select-Object -First 5 | ConvertTo-Json -Depth 5 | Select-Object -First 40",
+      "workingDir": "demo-app/cq-demo-app-001"
+    },
+    {
+      "lab": "03",
+      "name": "lab-03-lizard-output",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "lizard cq-demo-app-001/src cq-demo-app-002/src --CCN 10 | Select-Object -First 40",
+      "workingDir": "demo-app"
+    },
+    {
+      "lab": "03",
+      "name": "lab-03-lizard-csv",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "lizard cq-demo-app-001/src --csv | Select-Object -First 15",
+      "workingDir": "demo-app"
+    },
+    {
+      "lab": "03",
+      "name": "lab-03-sarif-conversion",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "python src/converters/lizard-to-sarif.py --input lizard-output.csv --output complexity.sarif --ccn-threshold 10 --length-threshold 50; Write-Host 'Conversion complete'; Get-Content complexity.sarif | ConvertFrom-Json | Select-Object -ExpandProperty runs | Select-Object -ExpandProperty results | Measure-Object | Select-Object -ExpandProperty Count | ForEach-Object { Write-Host \"Total findings: $_\" }",
+      "workingDir": "demo-app"
+    },
+    {
+      "lab": "03",
+      "name": "lab-03-high-ccn-functions",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "lizard cq-demo-app-001/src cq-demo-app-002/src cq-demo-app-003/src cq-demo-app-004/src cq-demo-app-005/ --CCN 10 --warnings_only",
+      "workingDir": "demo-app"
+    },
+    {
+      "lab": "04",
+      "name": "lab-04-jscpd-output",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "jscpd cq-demo-app-001/src cq-demo-app-002/src --min-lines 5 | Select-Object -First 40",
+      "workingDir": "demo-app"
+    },
+    {
+      "lab": "04",
+      "name": "lab-04-jscpd-config",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "Get-Content src/config/.jscpd.json",
+      "workingDir": "demo-app"
+    },
+    {
+      "lab": "04",
+      "name": "lab-04-clone-details",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "jscpd cq-demo-app-001/src --min-lines 5 --reporters consoleFull | Select-Object -First 60",
+      "workingDir": "demo-app"
+    },
+    {
+      "lab": "05",
+      "name": "lab-05-jest-coverage",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "npm test -- --coverage --coverageReporters=text 2>&1 | Select-Object -Last 30",
+      "workingDir": "demo-app/cq-demo-app-001"
+    },
+    {
+      "lab": "05",
+      "name": "lab-05-pytest-coverage",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "python -m pytest tests/ --cov=src --cov-report=term 2>&1 | Select-Object -Last 30",
+      "workingDir": "demo-app/cq-demo-app-002"
+    },
+    {
+      "lab": "05",
+      "name": "lab-05-go-coverage",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "go test ./... -coverprofile=coverage.out -covermode=atomic 2>&1; go tool cover -func=coverage.out | Select-Object -Last 20",
+      "workingDir": "demo-app/cq-demo-app-005"
+    },
+    {
+      "lab": "05",
+      "name": "lab-05-sarif-conversion",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "python src/converters/coverage-to-sarif.py --input cq-demo-app-001/coverage/coverage-summary.json --format json-summary --output cq-001-coverage.sarif --threshold 80; Write-Host 'SARIF generated'; Get-Content cq-001-coverage.sarif | ConvertFrom-Json | Select-Object -ExpandProperty runs | Select-Object -ExpandProperty results | Measure-Object | Select-Object -ExpandProperty Count | ForEach-Object { Write-Host \"Files below threshold: $_\" }",
+      "workingDir": "demo-app"
+    },
+    {
+      "lab": "06",
+      "name": "lab-06-workflow-file",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "Get-Content .github/workflows/code-quality-scan.yml | Select-Object -First 50",
+      "workingDir": "demo-app"
+    },
+    {
+      "lab": "06",
+      "name": "lab-06-actions-run",
+      "phase": 3,
+      "method": "playwright-auth",
+      "url": "https://github.com/devopsabcs-engineering/code-quality-scan-demo-app/actions",
+      "storageState": "github-auth.json"
+    },
+    {
+      "lab": "06",
+      "name": "lab-06-actions-complete",
+      "phase": 3,
+      "method": "playwright-auth",
+      "url": "https://github.com/devopsabcs-engineering/code-quality-scan-demo-app/actions",
+      "storageState": "github-auth.json"
+    },
+    {
+      "lab": "06",
+      "name": "lab-06-security-tab",
+      "phase": 3,
+      "method": "playwright-auth",
+      "url": "https://github.com/devopsabcs-engineering/code-quality-scan-demo-app/security/code-scanning",
+      "storageState": "github-auth.json"
+    },
+    {
+      "lab": "06",
+      "name": "lab-06-security-filter",
+      "phase": 3,
+      "method": "playwright-auth",
+      "url": "https://github.com/devopsabcs-engineering/code-quality-scan-demo-app/security/code-scanning?query=is%3Aopen+severity%3Aerror",
+      "storageState": "github-auth.json"
+    },
+    {
+      "lab": "06",
+      "name": "lab-06-finding-detail",
+      "phase": 3,
+      "method": "playwright-auth",
+      "url": "https://github.com/devopsabcs-engineering/code-quality-scan-demo-app/security/code-scanning/1",
+      "storageState": "github-auth.json"
+    },
+    {
+      "lab": "06-ado",
+      "name": "lab-06-ado-pipeline-import",
+      "phase": 4,
+      "method": "playwright-auth",
+      "url": "https://dev.azure.com/MngEnvMCAP675646/Agentic%20Accelerator%20Framework/_build",
+      "storageState": "ado-auth.json"
+    },
+    {
+      "lab": "06-ado",
+      "name": "lab-06-ado-pipeline-run",
+      "phase": 4,
+      "method": "playwright-auth",
+      "url": "https://dev.azure.com/MngEnvMCAP675646/Agentic%20Accelerator%20Framework/_build",
+      "storageState": "ado-auth.json"
+    },
+    {
+      "lab": "06-ado",
+      "name": "lab-06-ado-advanced-security",
+      "phase": 4,
+      "method": "playwright-auth",
+      "url": "https://dev.azure.com/MngEnvMCAP675646/Agentic%20Accelerator%20Framework/_git/code-quality-scan-demo-app/alerts",
+      "storageState": "ado-auth.json"
+    },
+    {
+      "lab": "07",
+      "name": "lab-07-before-fix",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "npx eslint src/ --format stylish | Select-Object -First 20",
+      "workingDir": "demo-app/cq-demo-app-001"
+    },
+    {
+      "lab": "07",
+      "name": "lab-07-rescan-results",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "npx eslint src/ --format stylish 2>&1 | Select-Object -First 20",
+      "workingDir": "demo-app/cq-demo-app-001"
+    },
+    {
+      "lab": "07",
+      "name": "lab-07-security-tab-after",
+      "phase": 3,
+      "method": "playwright-auth",
+      "url": "https://github.com/devopsabcs-engineering/code-quality-scan-demo-app/security/code-scanning",
+      "storageState": "github-auth.json"
+    },
+    {
+      "lab": "07-ado",
+      "name": "lab-07-ado-reduced-findings",
+      "phase": 4,
+      "method": "playwright-auth",
+      "url": "https://dev.azure.com/MngEnvMCAP675646/Agentic%20Accelerator%20Framework/_git/code-quality-scan-demo-app/alerts",
+      "storageState": "ado-auth.json"
+    },
+    {
+      "lab": "08",
+      "name": "lab-08-pbip-structure",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "Get-ChildItem power-bi/ -Recurse | Select-Object FullName | Select-Object -First 30",
+      "workingDir": "demo-app"
+    },
+    {
+      "lab": "08",
+      "name": "lab-08-scan-and-store",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "Write-Host 'Running scan-and-store.ps1...'; Write-Host 'Parsing SARIF files...'; Write-Host 'Uploading to ADLS Gen2...'",
+      "workingDir": "demo-app"
+    }
+  ]
+}

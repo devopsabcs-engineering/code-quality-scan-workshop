@@ -1,0 +1,17 @@
+title: "Code Quality Scan Workshop"
+description: "Hands-on workshop: Code quality scanning with ESLint, Ruff, jscpd, Lizard, and coverage tools"
+remote_theme: just-the-docs/just-the-docs
+baseurl: "/code-quality-scan-workshop"
+url: "https://devopsabcs-engineering.github.io"
+
+exclude:
+  - scripts/
+  - delivery/
+  - .devcontainer/
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - Gemfile.lock
+
+nav_order_base: 0
+heading_anchors: true
