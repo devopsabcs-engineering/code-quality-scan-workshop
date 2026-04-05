@@ -9,6 +9,9 @@ permalink: /
 
 Welcome to the **Code Quality Scan Workshop** — a hands-on, progressive workshop that teaches you how to integrate code quality scanning into your CI/CD pipelines using industry-standard open-source tools.
 
+> [!NOTE]
+> This workshop is part of the [Agentic Accelerator Framework](https://github.com/devopsabcs-engineering/agentic-accelerator-framework).
+
 You will scan five demo applications written in TypeScript, Python, C#, Java, and Go using a **4-tool scanning architecture**: per-language linters, code duplication detection, cyclomatic complexity analysis, and test coverage measurement. All results are normalized to [SARIF v2.1.0](https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html) for unified reporting in GitHub Advanced Security or Azure DevOps Advanced Security.
 
 ## Architecture Overview
