@@ -5,6 +5,10 @@ nav_order: 0
 permalink: /
 ---
 
+<p align="center">
+  <img src="assets/branding/logo-128.png" alt="Agentic Accelerator Framework" width="100">
+</p>
+
 # Code Quality Scan Workshop
 
 Welcome to the **Code Quality Scan Workshop** — a hands-on, progressive workshop that teaches you how to integrate code quality scanning into your CI/CD pipelines using industry-standard open-source tools.
