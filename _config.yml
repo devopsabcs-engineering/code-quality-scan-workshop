@@ -13,5 +13,11 @@ exclude:
   - package-lock.json
   - Gemfile.lock
 
+defaults:
+  - scope:
+      path: "images"
+    values:
+      nav_exclude: true
+
 nav_order_base: 0
 heading_anchors: true
