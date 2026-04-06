@@ -41,14 +41,19 @@ function Invoke-CharmFreeze {
         return
     }
 
-    $cmdArgs = @()
-    if ($WorkingDirectory) {
-        $cmdArgs += "--execute"
-        $cmdArgs += "cd '$WorkingDirectory'; $Command"
+    # Wrap commands in pwsh on Windows so PowerShell cmdlets work with freeze
+    $execCmd = if ($WorkingDirectory) {
+        "cd '$WorkingDirectory'; $Command"
     } else {
-        $cmdArgs += "--execute"
-        $cmdArgs += $Command
+        $Command
     }
+
+    if ($IsWindows) {
+        $escapedCmd = $execCmd -replace '"', '\"'
+        $execCmd = "pwsh -NoProfile -Command `"$escapedCmd`""
+    }
+
+    $cmdArgs = @("--execute", $execCmd)
     $cmdArgs += "--output"
     $cmdArgs += $OutputFile
     $cmdArgs += "--window"

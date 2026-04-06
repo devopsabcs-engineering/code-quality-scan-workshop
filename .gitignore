@@ -13,3 +13,12 @@ Thumbs.db
 .sass-cache/
 .bundle/
 vendor/
+package-lock.json
+
+# ── Auth / credentials ──
+scripts/ado-auth.json
+scripts/github-auth.json
+
+# ── Coverage output ──
+scripts/coverage
+scripts/coverage.out
