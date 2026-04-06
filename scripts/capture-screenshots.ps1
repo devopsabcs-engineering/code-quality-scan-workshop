@@ -42,9 +42,13 @@ Import-Module "$PSScriptRoot/screenshot-helpers.psm1" -Force
 
 # Ensure PATH includes Python Scripts for pip-installed tools
 if ($IsWindows) {
-    $pythonScripts = Join-Path $env:USERPROFILE "AppData\Local\Programs\Python\Python312\Scripts"
-    if (Test-Path $pythonScripts) {
-        $env:PATH = "$pythonScripts;$env:PATH"
+    # Try standard installer location first, then Microsoft Store location
+    $pythonScripts = @(
+        (Join-Path $env:USERPROFILE "AppData\Local\Programs\Python\Python*\Scripts"),
+        (Join-Path $env:USERPROFILE "AppData\Local\Packages\PythonSoftwareFoundation.Python.*\LocalCache\local-packages\Python*\Scripts")
+    ) | ForEach-Object { Resolve-Path $_ -ErrorAction SilentlyContinue } | Select-Object -First 1
+    if ($pythonScripts) {
+        $env:PATH = "$($pythonScripts.Path);$env:PATH"
     }
 }
 

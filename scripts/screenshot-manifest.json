@@ -110,7 +110,7 @@
       "name": "lab-01-violations-preview",
       "phase": 1,
       "method": "freeze-execute",
-      "command": "Get-Content cq-demo-app-001/src/utils/helpers.ts | Select-Object -First 40",
+      "command": "Get-Content cq-demo-app-001/src/lib/helpers.ts | Select-Object -First 40",
       "workingDir": "demo-app"
     },
     {
