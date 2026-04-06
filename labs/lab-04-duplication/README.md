@@ -41,7 +41,7 @@ jscpd scans for blocks of duplicated code (clones) across files and languages. T
 - **Lines** of duplicated code
 - **Percentage** of duplication in the codebase
 
-![jscpd output showing duplicates](../images/lab-04/lab-04-jscpd-output.png)
+![jscpd output showing duplicates](../../images/lab-04/lab-04-jscpd-output.png)
 
 ### Exercise 2: Generate an HTML Report
 
@@ -65,7 +65,7 @@ The HTML report provides:
 - Side-by-side comparison of duplicated blocks
 - File-level and project-level duplication metrics
 
-![jscpd HTML report](../images/lab-04/lab-04-duplication-report.png)
+![jscpd HTML report](../../images/lab-04/lab-04-duplication-report.png)
 
 ### Exercise 3: Understand Clone Types
 
@@ -83,7 +83,7 @@ Review a detected clone in detail:
 jscpd cq-demo-app-001/src cq-demo-app-002/src --min-lines 5 --reporters consoleFull
 ```
 
-![Clone detail view](../images/lab-04/lab-04-clone-details.png)
+![Clone detail view](../../images/lab-04/lab-04-clone-details.png)
 
 ### Exercise 4: Configure Detection Thresholds
 
@@ -123,7 +123,7 @@ Key configuration options:
 | `ignore` | `[]` | Glob patterns for files/directories to exclude |
 | `reporters` | `["consoleFull"]` | Output formats: `console`, `consoleFull`, `json`, `html`, `sarif` |
 
-![.jscpd.json configuration](../images/lab-04/lab-04-jscpd-config.png)
+![.jscpd.json configuration](../../images/lab-04/lab-04-jscpd-config.png)
 
 ### Exercise 5: Generate SARIF Output
 

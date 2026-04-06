@@ -64,7 +64,7 @@ power-bi/
             └── Dim_Date.tmdl
 ```
 
-![PBIP directory structure](../images/lab-08/lab-08-pbip-structure.png)
+![PBIP directory structure](../../images/lab-08/lab-08-pbip-structure.png)
 
 ### Exercise 2: Understand the Star Schema
 
@@ -140,7 +140,7 @@ az deployment group create `
 
 Note the storage account name from the deployment output — you'll need it for the data source configuration.
 
-![Deploying ADLS Gen2 storage](../images/lab-08/lab-08-adls-config.png)
+![Deploying ADLS Gen2 storage](../../images/lab-08/lab-08-adls-config.png)
 
 ### Exercise 4: Run scan-and-store.ps1
 
@@ -163,7 +163,7 @@ The script:
 3. Transforms findings into the fact table schema
 4. Uploads JSON files to ADLS Gen2 organized by date: `{yyyy}/{MM}/{dd}/{appId}-{tool}.json`
 
-![Running scan-and-store.ps1](../images/lab-08/lab-08-scan-and-store.png)
+![Running scan-and-store.ps1](../../images/lab-08/lab-08-scan-and-store.png)
 
 ### Exercise 5: Deploy the PBIP Report
 
@@ -193,7 +193,7 @@ Configure the data source:
     -ContainerName $container
 ```
 
-![Deploying PBIP to workspace](../images/lab-08/lab-08-deploy-workspace.png)
+![Deploying PBIP to workspace](../../images/lab-08/lab-08-deploy-workspace.png)
 
 ### Exercise 6: Explore the Dashboard
 
@@ -205,21 +205,21 @@ Once data is loaded, explore the report pages:
 - Findings by tool (ESLint, Ruff, Lizard, jscpd, Coverage)
 - Findings per repository
 
-![Quality overview dashboard](../images/lab-08/lab-08-dashboard-overview.png)
+![Quality overview dashboard](../../images/lab-08/lab-08-dashboard-overview.png)
 
 **Quality Trends** — Time-series analysis:
 - Findings over time (trending up or down)
 - Coverage trends per app
 - Complexity trends per app
 
-![Quality trends dashboard](../images/lab-08/lab-08-dashboard-trends.png)
+![Quality trends dashboard](../../images/lab-08/lab-08-dashboard-trends.png)
 
 **Finding Details** — Drill-down table:
 - Individual findings with file path, line number, rule ID
 - Filter by app, tool, severity, and date range
 - Export to CSV for further analysis
 
-![Finding detail drilldown](../images/lab-08/lab-08-dashboard-drilldown.png)
+![Finding detail drilldown](../../images/lab-08/lab-08-dashboard-drilldown.png)
 
 ### Exercise 7: Cross-Domain Reporting
 

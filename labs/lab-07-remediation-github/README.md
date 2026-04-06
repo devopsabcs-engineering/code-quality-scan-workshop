@@ -51,7 +51,7 @@ Common manual fixes:
 | `@typescript-eslint/no-explicit-any` | Replace `any` with a specific type |
 | `prefer-const` | Change `let` to `const` for never-reassigned variables |
 
-![Code before fixes](../images/lab-07/lab-07-before-fix.png)
+![Code before fixes](../../images/lab-07/lab-07-before-fix.png)
 
 After fixing, verify zero lint violations:
 
@@ -130,7 +130,7 @@ function validate(input: Input): boolean {
 }
 ```
 
-![Refactored function with reduced complexity](../images/lab-07/lab-07-complexity-refactor.png)
+![Refactored function with reduced complexity](../../images/lab-07/lab-07-complexity-refactor.png)
 
 Verify the complexity reduction:
 
@@ -179,7 +179,7 @@ describe('validateEmail', () => {
 });
 ```
 
-![New test file with added test cases](../images/lab-07/lab-07-added-tests.png)
+![New test file with added test cases](../../images/lab-07/lab-07-added-tests.png)
 
 Run coverage again to verify improvement:
 
@@ -227,7 +227,7 @@ export function normalizeInput(input: string): string {
 }
 ```
 
-![Extracted shared utility](../images/lab-07/lab-07-dedup-utility.png)
+![Extracted shared utility](../../images/lab-07/lab-07-dedup-utility.png)
 
 Verify duplication is reduced:
 
@@ -260,7 +260,7 @@ $runId = gh run list --workflow=code-quality-scan.yml --limit 1 --json databaseI
 gh run watch $runId
 ```
 
-![Re-scan results showing reduced findings](../images/lab-07/lab-07-rescan-results.png)
+![Re-scan results showing reduced findings](../../images/lab-07/lab-07-rescan-results.png)
 
 Check the GitHub Security tab for the updated findings count. You should see:
 
@@ -269,7 +269,7 @@ Check the GitHub Security tab for the updated findings count. You should see:
 - Lower duplication percentage (extracted shared utilities)
 - Improved coverage (new tests covering previously untested code)
 
-![GitHub Security tab after remediation](../images/lab-07/lab-07-security-tab-after.png)
+![GitHub Security tab after remediation](../../images/lab-07/lab-07-security-tab-after.png)
 
 ## Verification Checkpoint
 

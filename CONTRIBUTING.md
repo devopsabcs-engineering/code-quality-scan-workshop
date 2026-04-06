@@ -77,7 +77,7 @@ Examples:
 Place screenshot references after the step that produces visible output:
 
 ```markdown
-![ESLint results showing 12 warnings](../images/lab-02/lab-02-eslint-output.png)
+![ESLint results showing 12 warnings](../../images/lab-02/lab-02-eslint-output.png)
 ```
 
 ### Adding New Screenshots

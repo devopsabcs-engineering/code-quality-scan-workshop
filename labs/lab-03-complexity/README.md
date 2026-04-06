@@ -59,7 +59,7 @@ Lizard outputs a table with these columns:
 | Length | Total function length in lines |
 | Location | File path and function name |
 
-![Lizard output showing complexity metrics](../images/lab-03/lab-03-lizard-output.png)
+![Lizard output showing complexity metrics](../../images/lab-03/lab-03-lizard-output.png)
 
 ### Exercise 3: Generate CSV Output
 
@@ -77,7 +77,7 @@ Get-Content lizard-output.csv | Select-Object -First 15
 
 The CSV contains one row per function with columns: NLOC, CCN, Token, PARAM, Length, Location, File, Function, Start, End.
 
-![Lizard CSV output](../images/lab-03/lab-03-lizard-csv.png)
+![Lizard CSV output](../../images/lab-03/lab-03-lizard-csv.png)
 
 ### Exercise 4: Convert to SARIF Format
 
@@ -98,7 +98,7 @@ Examine the generated SARIF:
 Get-Content complexity.sarif | ConvertFrom-Json | Select-Object -ExpandProperty runs | Select-Object -ExpandProperty results | Select-Object ruleId, level, @{N='function';E={$_.locations[0].physicalLocation.artifactLocation.uri}} | Format-Table
 ```
 
-![lizard-to-sarif.py conversion output](../images/lab-03/lab-03-sarif-conversion.png)
+![lizard-to-sarif.py conversion output](../../images/lab-03/lab-03-sarif-conversion.png)
 
 ### Exercise 5: Identify High-Complexity Functions
 
@@ -114,7 +114,7 @@ For each flagged function, note:
 2. **What causes it** — nested `if/else`, `switch` statements, loops within loops
 3. **How to fix it** — extract helper functions, use early returns, replace conditionals with lookup tables
 
-![Functions exceeding CCN threshold](../images/lab-03/lab-03-high-ccn-functions.png)
+![Functions exceeding CCN threshold](../../images/lab-03/lab-03-high-ccn-functions.png)
 
 ### Exercise 6: Analyze Nesting Depth
 

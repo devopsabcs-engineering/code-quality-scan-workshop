@@ -46,7 +46,7 @@ You should see the following key directories:
 
 Additional directories include `src/converters/` (SARIF converters), `src/config/` (tool configurations), `scripts/` (bootstrap and data pipeline), and `power-bi/` (PBIP dashboard).
 
-![Repository directory structure](../images/lab-01/lab-01-repo-structure.png)
+![Repository directory structure](../../images/lab-01/lab-01-repo-structure.png)
 
 ### Exercise 2: Explore cq-demo-app-001 (TypeScript / Express)
 
@@ -84,7 +84,7 @@ docker run -d -p 3000:3000 --name app001 cq-demo-app-001
 
 Open [http://localhost:3000](http://localhost:3000) to see the running app.
 
-![TypeScript Express app running](../images/lab-01/lab-01-app-001-running.png)
+![TypeScript Express app running](../../images/lab-01/lab-01-app-001-running.png)
 
 Clean up:
 
@@ -128,7 +128,7 @@ docker run -d -p 5000:5000 --name app002 cq-demo-app-002
 
 Open [http://localhost:5000](http://localhost:5000) to verify.
 
-![Python Flask app running](../images/lab-01/lab-01-app-002-running.png)
+![Python Flask app running](../../images/lab-01/lab-01-app-002-running.png)
 
 Clean up:
 
@@ -172,7 +172,7 @@ docker run -d -p 8080:8080 --name app003 cq-demo-app-003
 
 Open [http://localhost:8080](http://localhost:8080) to verify.
 
-![C# ASP.NET Core app running](../images/lab-01/lab-01-app-003-running.png)
+![C# ASP.NET Core app running](../../images/lab-01/lab-01-app-003-running.png)
 
 Clean up:
 
@@ -216,7 +216,7 @@ docker run -d -p 8080:8080 --name app004 cq-demo-app-004
 
 Open [http://localhost:8080](http://localhost:8080) to verify.
 
-![Java Spring Boot app running](../images/lab-01/lab-01-app-004-running.png)
+![Java Spring Boot app running](../../images/lab-01/lab-01-app-004-running.png)
 
 Clean up:
 
@@ -260,7 +260,7 @@ docker run -d -p 8080:8080 --name app005 cq-demo-app-005
 
 Open [http://localhost:8080](http://localhost:8080) to verify.
 
-![Go net/http app running](../images/lab-01/lab-01-app-005-running.png)
+![Go net/http app running](../../images/lab-01/lab-01-app-005-running.png)
 
 Clean up:
 
@@ -285,7 +285,7 @@ Look for these patterns:
 4. **Copy-pasted blocks**: Similar code blocks in different files
 5. **Missing tests**: Source files without corresponding test files
 
-![Sample code with intentional violations](../images/lab-01/lab-01-violations-preview.png)
+![Sample code with intentional violations](../../images/lab-01/lab-01-violations-preview.png)
 
 ## Verification Checkpoint
 

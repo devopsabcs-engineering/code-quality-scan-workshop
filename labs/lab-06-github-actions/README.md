@@ -59,7 +59,7 @@ strategy:
 
 Each matrix job uploads SARIF with a unique category prefix: `code-quality-scan/${{ matrix.app }}`.
 
-![code-quality-scan.yml workflow](../images/lab-06/lab-06-workflow-file.png)
+![code-quality-scan.yml workflow](../../images/lab-06/lab-06-workflow-file.png)
 
 ### Exercise 2: Run the Workflow Manually
 
@@ -82,7 +82,7 @@ $runId = gh run list --workflow=code-quality-scan.yml --limit 1 --json databaseI
 gh run watch $runId
 ```
 
-![GitHub Actions workflow run](../images/lab-06/lab-06-actions-run.png)
+![GitHub Actions workflow run](../../images/lab-06/lab-06-actions-run.png)
 
 ### Exercise 3: View Workflow Results
 
@@ -98,7 +98,7 @@ View the logs for a specific matrix job:
 gh run view $runId --log | Select-Object -First 100
 ```
 
-![Workflow run completed](../images/lab-06/lab-06-actions-complete.png)
+![Workflow run completed](../../images/lab-06/lab-06-actions-complete.png)
 
 ### Exercise 4: Explore the GitHub Security Tab
 
@@ -118,7 +118,7 @@ The Security tab shows all SARIF findings uploaded by the workflow:
 - **Tool filtering** — filter by ESLint, Ruff, Lizard, jscpd, etc.
 - **Category filtering** — filter by `code-quality-scan/001` through `code-quality-scan/005`
 
-![GitHub Security tab with SARIF findings](../images/lab-06/lab-06-security-tab.png)
+![GitHub Security tab with SARIF findings](../../images/lab-06/lab-06-security-tab.png)
 
 ### Exercise 5: Filter Findings
 
@@ -134,7 +134,7 @@ In the GitHub Security tab, practice filtering:
 **By category:**
 - Use the category filter to see findings for a specific demo app
 
-![Filtering findings by severity](../images/lab-06/lab-06-security-filter.png)
+![Filtering findings by severity](../../images/lab-06/lab-06-security-filter.png)
 
 ### Exercise 6: Examine a Finding Detail
 
@@ -145,7 +145,7 @@ Click on any finding to see its detail view:
 - **Remediation guidance** — how to fix the issue
 - **Help documentation** — link to the rule's documentation
 
-![Finding detail view](../images/lab-06/lab-06-finding-detail.png)
+![Finding detail view](../../images/lab-06/lab-06-finding-detail.png)
 
 The SARIF `help.markdown` field is rendered here, providing context-specific remediation guidance. This is why SARIF enrichment (adding `help.markdown`, `properties.tags`, and `partialFingerprints`) is important — it makes the triage experience richer.
 

@@ -78,7 +78,7 @@ Verify your changes:
 lizard cq-demo-app-001/src --CCN 10 --warnings_only
 ```
 
-![Code fix applied in ADO](../images/lab-07-ado/lab-07-ado-code-fix.png)
+![Code fix applied in ADO](../../images/lab-07-ado/lab-07-ado-code-fix.png)
 
 ### Exercise 4: Push Fixes to ADO
 
@@ -98,7 +98,7 @@ The push to `main` automatically triggers the `code-quality-scan.yml` pipeline i
 2. Find the triggered pipeline run.
 3. Wait for all 5 matrix jobs to complete.
 
-![ADO pipeline re-run](../images/lab-07-ado/lab-07-ado-pipeline-rerun.png)
+![ADO pipeline re-run](../../images/lab-07-ado/lab-07-ado-pipeline-rerun.png)
 
 ### Exercise 6: Verify Reduced Findings
 
@@ -109,7 +109,7 @@ The push to `main` automatically triggers the `code-quality-scan.yml` pipeline i
    - Complexity warnings are reduced (refactored functions pass the threshold)
    - Coverage findings are reduced (new tests improve file-level coverage)
 
-![ADO Advanced Security showing reduced findings](../images/lab-07-ado/lab-07-ado-reduced-findings.png)
+![ADO Advanced Security showing reduced findings](../../images/lab-07-ado/lab-07-ado-reduced-findings.png)
 
 ### Exercise 7: Compare GitHub and ADO Remediation Workflows
 

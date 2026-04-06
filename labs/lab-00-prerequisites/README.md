@@ -41,7 +41,7 @@ npm --version
 
 You should see Node.js version 20.x or higher.
 
-![Node.js version verification](../images/lab-00/lab-00-node-version.png)
+![Node.js version verification](../../images/lab-00/lab-00-node-version.png)
 
 ### Exercise 2: Install Python 3.12+
 
@@ -56,7 +56,7 @@ pip --version
 
 You should see Python version 3.12.x or higher.
 
-![Python version verification](../images/lab-00/lab-00-python-version.png)
+![Python version verification](../../images/lab-00/lab-00-python-version.png)
 
 ### Exercise 3: Install .NET 8 SDK
 
@@ -70,7 +70,7 @@ dotnet --version
 
 You should see version 8.0.x or higher.
 
-![.NET SDK version verification](../images/lab-00/lab-00-dotnet-version.png)
+![.NET SDK version verification](../../images/lab-00/lab-00-dotnet-version.png)
 
 ### Exercise 4: Install Java 21+
 
@@ -85,7 +85,7 @@ mvn --version
 
 You should see Java version 21.x or higher.
 
-![Java version verification](../images/lab-00/lab-00-java-version.png)
+![Java version verification](../../images/lab-00/lab-00-java-version.png)
 
 ### Exercise 5: Install Go 1.22+
 
@@ -99,7 +99,7 @@ go version
 
 You should see Go version 1.22.x or higher.
 
-![Go version verification](../images/lab-00/lab-00-go-version.png)
+![Go version verification](../../images/lab-00/lab-00-go-version.png)
 
 ### Exercise 6: Install Docker
 
@@ -114,7 +114,7 @@ docker --version
 docker run hello-world
 ```
 
-![Docker version verification](../images/lab-00/lab-00-docker-version.png)
+![Docker version verification](../../images/lab-00/lab-00-docker-version.png)
 
 ### Exercise 7: Install Scanning Tools
 
@@ -176,7 +176,7 @@ Write-Host "Lizard:        $(lizard --version)"
 Write-Host "golangci-lint: $(golangci-lint --version)"
 ```
 
-![All scanning tools verified](../images/lab-00/lab-00-tools-installed.png)
+![All scanning tools verified](../../images/lab-00/lab-00-tools-installed.png)
 
 ### Exercise 8: Fork and Clone the Demo App Repository
 
@@ -210,7 +210,7 @@ cq-demo-app-004
 cq-demo-app-005
 ```
 
-![Cloning the demo-app repository](../images/lab-00/lab-00-clone-repo.png)
+![Cloning the demo-app repository](../../images/lab-00/lab-00-clone-repo.png)
 
 ### Exercise 9: Verify Docker Builds
 

@@ -35,7 +35,7 @@ If the repository has not been imported to ADO yet, use the bootstrap script or 
 
 Alternatively, use the `bootstrap-demo-apps-ado.ps1` script which automates this process.
 
-![Importing repository into ADO](../images/lab-06-ado/lab-06-ado-pipeline-import.png)
+![Importing repository into ADO](../../images/lab-06-ado/lab-06-ado-pipeline-import.png)
 
 ### Exercise 2: Create the Pipeline
 
@@ -89,11 +89,11 @@ steps:
 2. Click on the running pipeline to see job progress.
 3. Each matrix job runs independently and produces its own SARIF output.
 
-![ADO pipeline running](../images/lab-06-ado/lab-06-ado-pipeline-run.png)
+![ADO pipeline running](../../images/lab-06-ado/lab-06-ado-pipeline-run.png)
 
 Wait for all 5 matrix jobs to complete:
 
-![ADO pipeline completed](../images/lab-06-ado/lab-06-ado-pipeline-complete.png)
+![ADO pipeline completed](../../images/lab-06-ado/lab-06-ado-pipeline-complete.png)
 
 ### Exercise 4: View Results in ADO Advanced Security
 
@@ -104,7 +104,7 @@ Wait for all 5 matrix jobs to complete:
    - **Tool**: The scanner name from the SARIF `tool.driver.name` field
    - **Rule**: Individual rule IDs
 
-![ADO Advanced Security findings](../images/lab-06-ado/lab-06-ado-advanced-security.png)
+![ADO Advanced Security findings](../../images/lab-06-ado/lab-06-ado-advanced-security.png)
 
 ### Exercise 5: Examine a Finding
 
@@ -115,7 +115,7 @@ Click on any finding to see its detail view:
 - **Severity** mapped from the SARIF level
 - **Remediation guidance** from the SARIF `help.markdown` field
 
-![ADO finding detail](../images/lab-06-ado/lab-06-ado-finding-detail.png)
+![ADO finding detail](../../images/lab-06-ado/lab-06-ado-finding-detail.png)
 
 ### Exercise 6: Compare GitHub vs. ADO Integration
 

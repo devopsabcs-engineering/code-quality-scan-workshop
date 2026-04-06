@@ -43,7 +43,7 @@ Jest outputs a coverage summary table:
 | **Functions** | Percentage of functions called |
 | **Lines** | Percentage of lines executed |
 
-![Jest coverage output](../images/lab-05/lab-05-jest-coverage.png)
+![Jest coverage output](../../images/lab-05/lab-05-jest-coverage.png)
 
 The coverage summary JSON is saved to `coverage/coverage-summary.json`. Note the intentionally low coverage — many utility functions have no tests.
 
@@ -60,7 +60,7 @@ python -m pytest tests/ --cov=src --cov-report=term --cov-report=xml:coverage.xm
 
 pytest-cov generates a Cobertura XML report at `coverage.xml` and prints a terminal summary.
 
-![pytest-cov coverage output](../images/lab-05/lab-05-pytest-coverage.png)
+![pytest-cov coverage output](../../images/lab-05/lab-05-pytest-coverage.png)
 
 Note which modules have low coverage — the service layer typically has the least coverage in this demo app because error-handling paths are untested.
 
@@ -89,7 +89,7 @@ reportgenerator -reports:TestResults/**/coverage.cobertura.xml -targetdir:Covera
 Get-Content CoverageReport/Summary.txt
 ```
 
-![Coverlet coverage output](../images/lab-05/lab-05-coverlet-output.png)
+![Coverlet coverage output](../../images/lab-05/lab-05-coverlet-output.png)
 
 ```powershell
 cd ..
@@ -112,7 +112,7 @@ View the summary:
 Get-Content target/site/jacoco/jacoco.xml | Select-String "counter type" | Select-Object -First 10
 ```
 
-![JaCoCo coverage output](../images/lab-05/lab-05-jacoco-output.png)
+![JaCoCo coverage output](../../images/lab-05/lab-05-jacoco-output.png)
 
 ```powershell
 cd ..
@@ -128,7 +128,7 @@ go tool cover -func=coverage.out
 
 The `-func` flag shows per-function coverage. The Go demo app intentionally has minimal test files, resulting in very low coverage.
 
-![Go test coverage output](../images/lab-05/lab-05-go-coverage.png)
+![Go test coverage output](../../images/lab-05/lab-05-go-coverage.png)
 
 To generate an HTML coverage report:
 
@@ -175,7 +175,7 @@ python src/converters/coverage-to-sarif.py --input cq-demo-app-004/target/site/j
 python src/converters/coverage-to-sarif.py --input cq-demo-app-005/coverage.out --format gocover --output cq-005-coverage.sarif --threshold 80
 ```
 
-![coverage-to-sarif.py conversion](../images/lab-05/lab-05-sarif-conversion.png)
+![coverage-to-sarif.py conversion](../../images/lab-05/lab-05-sarif-conversion.png)
 
 ### Exercise 7: Compare Coverage Across Apps
 
@@ -200,7 +200,7 @@ Write-Host "App 005 (Go):"
 Get-Content cq-005-coverage.sarif | ConvertFrom-Json | Select-Object -ExpandProperty runs | Select-Object -ExpandProperty results | Measure-Object | Select-Object -ExpandProperty Count | ForEach-Object { Write-Host "  Files below threshold: $_" }
 ```
 
-![Coverage comparison across apps](../images/lab-05/lab-05-coverage-comparison.png)
+![Coverage comparison across apps](../../images/lab-05/lab-05-coverage-comparison.png)
 
 The 80% threshold is the CI quality gate standard. Any file below this threshold generates a SARIF finding that would block a merge in a production CI pipeline.
 

@@ -49,7 +49,7 @@ You should see violations such as:
 - `@typescript-eslint/no-unused-vars` — declared but unused variables
 - `@typescript-eslint/no-explicit-any` — use of `any` type instead of specific types
 
-![ESLint output showing TypeScript violations](../images/lab-02/lab-02-eslint-output.png)
+![ESLint output showing TypeScript violations](../../images/lab-02/lab-02-eslint-output.png)
 
 Now run ESLint with SARIF output to see the machine-readable format:
 
@@ -68,7 +68,7 @@ Examine the SARIF output:
 Get-Content eslint-results.sarif | ConvertFrom-Json | ConvertTo-Json -Depth 10 | Select-Object -First 60
 ```
 
-![ESLint SARIF output](../images/lab-02/lab-02-eslint-sarif.png)
+![ESLint SARIF output](../../images/lab-02/lab-02-eslint-sarif.png)
 
 ```powershell
 cd ..
@@ -93,7 +93,7 @@ Ruff organizes rules by category prefix:
 | `I` | isort — import ordering | I001 (unsorted imports) |
 | `N` | pep8-naming — naming conventions | N802 (function name should be lowercase) |
 
-![Ruff output showing Python violations](../images/lab-02/lab-02-ruff-output.png)
+![Ruff output showing Python violations](../../images/lab-02/lab-02-ruff-output.png)
 
 Run Ruff with SARIF output:
 
@@ -124,7 +124,7 @@ Common .NET Analyzer findings include:
 | CA1031 | Do not catch general exception types |
 | IDE0060 | Remove unused parameter |
 
-![.NET Analyzers output](../images/lab-02/lab-02-dotnet-analyzers.png)
+![.NET Analyzers output](../../images/lab-02/lab-02-dotnet-analyzers.png)
 
 To generate SARIF output from the .NET build:
 
@@ -157,7 +157,7 @@ Common Checkstyle findings:
 | `JavadocMethod` | Missing Javadoc on public methods |
 | `CyclomaticComplexity` | Methods with complexity > 10 |
 
-![Checkstyle output for Java](../images/lab-02/lab-02-checkstyle-output.png)
+![Checkstyle output for Java](../../images/lab-02/lab-02-checkstyle-output.png)
 
 ```powershell
 cd ..
@@ -182,7 +182,7 @@ Common golangci-lint findings:
 | `govet` | Reports suspicious constructs |
 | `unused` | Unused variables, functions, or types |
 
-![golangci-lint output for Go](../images/lab-02/lab-02-golangci-lint-output.png)
+![golangci-lint output for Go](../../images/lab-02/lab-02-golangci-lint-output.png)
 
 Run with SARIF output (golangci-lint does not natively output SARIF, but you can use JSON and convert):
 
@@ -247,7 +247,7 @@ Key SARIF concepts:
 | `results[].locations` | File path, line number, and column |
 | `results[].message` | Human-readable description of the finding |
 
-![SARIF JSON structure](../images/lab-02/lab-02-sarif-structure.png)
+![SARIF JSON structure](../../images/lab-02/lab-02-sarif-structure.png)
 
 ## Verification Checkpoint
 
