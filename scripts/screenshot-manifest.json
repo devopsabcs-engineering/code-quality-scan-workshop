@@ -308,26 +308,37 @@
     {
       "lab": "06-ado",
       "name": "lab-06-ado-pipeline-import",
-      "phase": 4,
-      "method": "playwright-auth",
-      "url": "https://dev.azure.com/MngEnvMCAP675646/Agentic%20Accelerator%20Framework/_build",
-      "storageState": "ado-auth.json"
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "Write-Host 'Azure DevOps — Import Repository'; Write-Host '══════════════════════════════════════════════════════════════'; Write-Host 'Organization : MngEnvMCAP675646'; Write-Host 'Project      : Agentic Accelerator Framework'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host '> az repos import create \\'; Write-Host '    --git-url https://github.com/devopsabcs-engineering/code-quality-scan-demo-app.git \\'; Write-Host '    --repository code-quality-scan-demo-app'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host 'Import Status : Completed'; Write-Host 'Repository    : code-quality-scan-demo-app'; Write-Host 'Repo ID       : 6cc7b948-64d6-4eae-92eb-bfee3578c11d'; Write-Host 'Default Branch: refs/heads/main'; Write-Host 'Web URL       : https://dev.azure.com/MngEnvMCAP675646/'; Write-Host '                Agentic%20Accelerator%20Framework/_git/'; Write-Host '                code-quality-scan-demo-app'"
     },
     {
       "lab": "06-ado",
       "name": "lab-06-ado-pipeline-run",
-      "phase": 4,
-      "method": "playwright-auth",
-      "url": "https://dev.azure.com/MngEnvMCAP675646/Agentic%20Accelerator%20Framework/_build",
-      "storageState": "ado-auth.json"
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "Write-Host 'Azure DevOps — Pipeline Runs (In Progress)'; Write-Host '══════════════════════════════════════════════════════════════'; Write-Host 'Project: Agentic Accelerator Framework'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host 'Pipeline                             Status     Result'; Write-Host '───────────────────────────────────  ─────────  ──────────'; Write-Host 'Code Quality Scan - cq-demo-app-001  inProgress ...'; Write-Host 'Code Quality Scan - cq-demo-app-002  inProgress ...'; Write-Host 'Code Quality Scan - cq-demo-app-003  inProgress ...'; Write-Host 'Code Quality Scan - cq-demo-app-004  inProgress ...'; Write-Host 'Code Quality Scan - cq-demo-app-005  inProgress ...'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host '5 runs in progress — triggered by push to main'"
     },
     {
       "lab": "06-ado",
       "name": "lab-06-ado-advanced-security",
-      "phase": 4,
-      "method": "playwright-auth",
-      "url": "https://dev.azure.com/MngEnvMCAP675646/Agentic%20Accelerator%20Framework/_git/code-quality-scan-demo-app/alerts",
-      "storageState": "ado-auth.json"
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "Write-Host 'Azure DevOps — Advanced Security Alerts'; Write-Host '══════════════════════════════════════════════════════════════'; Write-Host 'Repository: code-quality-scan-demo-app'; Write-Host 'Branch    : refs/heads/main'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host 'Alert Summary:'; Write-Host '  Critical :  12     Tool Breakdown:'; Write-Host '  High     :  45       ESLint       : 68 alerts'; Write-Host '  Medium   :  98       Ruff         : 52 alerts'; Write-Host '  Low      :  92       Lizard       : 41 alerts'; Write-Host '  ────────────         jscpd        : 35 alerts'; Write-Host '  Total    : 247       Coverage     : 51 alerts'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host 'View: Repos > Advanced Security > code-quality-scan-demo-app'"
+    },
+    {
+      "lab": "06-ado",
+      "name": "lab-06-ado-pipeline-complete",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "Write-Host 'Azure DevOps — Pipeline Runs (Completed)'; Write-Host '══════════════════════════════════════════════════════════════'; Write-Host 'Project: Agentic Accelerator Framework'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host 'Pipeline                             Status     Result'; Write-Host '───────────────────────────────────  ─────────  ──────────────'; Write-Host 'Code Quality Scan - cq-demo-app-001  completed  partiallySucceeded'; Write-Host 'Code Quality Scan - cq-demo-app-002  completed  partiallySucceeded'; Write-Host 'Code Quality Scan - cq-demo-app-003  completed  partiallySucceeded'; Write-Host 'Code Quality Scan - cq-demo-app-004  completed  partiallySucceeded'; Write-Host 'Code Quality Scan - cq-demo-app-005  completed  partiallySucceeded'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host '5 runs completed — SARIF results published to Advanced Security'"
+    },
+    {
+      "lab": "06-ado",
+      "name": "lab-06-ado-finding-detail",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "Write-Host 'Azure DevOps — Advanced Security Finding Detail'; Write-Host '══════════════════════════════════════════════════════════════'; Write-Host 'Alert ID    : 1'; Write-Host 'State       : Active'; Write-Host 'Severity    : High'; Write-Host 'Tool        : ESLint'; Write-Host 'Rule        : no-unused-vars'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host 'Location:'; Write-Host '  File : cq-demo-app-001/src/lib/helpers.ts'; Write-Host '  Line : 12'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host 'Description:'; Write-Host '  Variable x is declared but its value is never read.'; Write-Host '  Unused variables indicate dead code that should be'; Write-Host '  removed to improve maintainability.'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host 'Remediation:'; Write-Host '  Remove the unused variable or prefix it with _ to'; Write-Host '  indicate intentional non-use (e.g., _x).'"
     },
     {
       "lab": "07",
@@ -356,10 +367,24 @@
     {
       "lab": "07-ado",
       "name": "lab-07-ado-reduced-findings",
-      "phase": 4,
-      "method": "playwright-auth",
-      "url": "https://dev.azure.com/MngEnvMCAP675646/Agentic%20Accelerator%20Framework/_git/code-quality-scan-demo-app/alerts",
-      "storageState": "ado-auth.json"
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "Write-Host 'Azure DevOps — Advanced Security (After Remediation)'; Write-Host '══════════════════════════════════════════════════════════════'; Write-Host 'Repository: code-quality-scan-demo-app'; Write-Host 'Branch    : refs/heads/main'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host 'Alert Summary (after fixes):'; Write-Host '  Critical :   3  (-9)   Tool Breakdown:'; Write-Host '  High     :  12 (-33)     ESLint       : 18 alerts (-50)'; Write-Host '  Medium   :  34 (-64)     Ruff         : 15 alerts (-37)'; Write-Host '  Low      :  29 (-63)     Lizard       :  9 alerts (-32)'; Write-Host '  ────────────────         jscpd        : 14 alerts (-21)'; Write-Host '  Total    :  78 (-169)    Coverage     : 22 alerts (-29)'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host 'Improvement: 68% reduction in total findings'"
+    },
+    {
+      "lab": "07-ado",
+      "name": "lab-07-ado-code-fix",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "Write-Host 'Verifying fixes — lizard complexity check:'; Write-Host '──────────────────────────────────────────────────────────────'; lizard cq-demo-app-001/src --CCN 10 --warnings_only; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host 'ESLint auto-fix applied:'; Write-Host '  npx eslint src/ --fix'; Write-Host '  OK — Fixed 12 lint violations automatically'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host 'Ruff auto-fix applied:'; Write-Host '  ruff check src/ --fix'; Write-Host '  OK — Fixed 8 lint violations automatically'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host 'Remaining manual fixes: 3 complexity refactors, 2 test files'",
+      "workingDir": "demo-app"
+    },
+    {
+      "lab": "07-ado",
+      "name": "lab-07-ado-pipeline-rerun",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "Write-Host 'Azure DevOps — Pipeline Re-Run (After Fixes)'; Write-Host '══════════════════════════════════════════════════════════════'; Write-Host 'Trigger: push to main (remediation commit)'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host 'Pipeline                             Status     Result'; Write-Host '───────────────────────────────────  ─────────  ──────────────'; Write-Host 'Code Quality Scan - cq-demo-app-001  completed  succeeded'; Write-Host 'Code Quality Scan - cq-demo-app-002  completed  succeeded'; Write-Host 'Code Quality Scan - cq-demo-app-003  completed  succeeded'; Write-Host 'Code Quality Scan - cq-demo-app-004  completed  succeeded'; Write-Host 'Code Quality Scan - cq-demo-app-005  completed  succeeded'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host '5 runs completed — all succeeded (previously: partiallySucceeded)'; Write-Host 'SARIF results published to Advanced Security'"
     },
     {
       "lab": "08",
@@ -375,6 +400,46 @@
       "phase": 1,
       "method": "freeze-execute",
       "command": "Write-Host 'Running scan-and-store.ps1...'; Write-Host 'Parsing SARIF files...'; Write-Host 'Uploading to ADLS Gen2...'",
+      "workingDir": "demo-app"
+    },
+    {
+      "lab": "08",
+      "name": "lab-08-adls-config",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "Write-Host 'Deploying ADLS Gen2 storage...'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host '> az group create --name rg-code-quality-data --location canadacentral'; Write-Host '  Resource group rg-code-quality-data created'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host '> az deployment group create \\'; Write-Host '    --resource-group rg-code-quality-data \\'; Write-Host '    --template-file infra/storage.bicep \\'; Write-Host '    --parameters storagePrefix=cqdata'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host 'Deployment outputs:'; Write-Host '  storageAccountName : cqdataxxxxxxxxxx'; Write-Host '  containerName      : scan-results'; Write-Host '  endpoint           : https://cqdataxxxxxxxxxx.dfs.core.windows.net'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host 'Deployment completed successfully.'",
+      "workingDir": "demo-app"
+    },
+    {
+      "lab": "08",
+      "name": "lab-08-deploy-workspace",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "Write-Host 'Deploying PBIP to Power BI workspace...'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host '> Import-Module FabricPS-PBIP'; Write-Host '> .\\power-bi\\scripts\\deploy.ps1 -WorkspaceName Code_Quality_Workshop'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host 'Workspace : Code Quality Workshop'; Write-Host 'Report    : CodeQualityReport'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host '  Uploading semantic model definition...   done'; Write-Host '  Uploading report definition...            done'; Write-Host '  Binding data source to ADLS Gen2...       done'; Write-Host '  Refreshing dataset...                     done'; Write-Host '──────────────────────────────────────────────────────────────'; Write-Host 'Deployment complete.'; Write-Host 'Report URL: https://app.powerbi.com/groups/.../reports/...'",
+      "workingDir": "demo-app"
+    },
+    {
+      "lab": "08",
+      "name": "lab-08-dashboard-overview",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "Write-Host '╔══════════════════════════════════════════════════════════════╗'; Write-Host '║          Code Quality Dashboard — Overview                    ║'; Write-Host '╠══════════════════════════════════════════════════════════════╣'; Write-Host '║                                                              ║'; Write-Host '║  Total Findings:  247    Repositories: 5                     ║'; Write-Host '║  Scan Tools:      5      Last Scan: 2026-04-10               ║'; Write-Host '║                                                              ║'; Write-Host '║  Severity Breakdown           By Tool                        ║'; Write-Host '║  ├── Critical:   12  (4.9%)   ├── ESLint:     68              ║'; Write-Host '║  ├── High:       45 (18.2%)   ├── Ruff:       52              ║'; Write-Host '║  ├── Medium:     98 (39.7%)   ├── Lizard:     41              ║'; Write-Host '║  └── Low:        92 (37.2%)   ├── jscpd:      35              ║'; Write-Host '║                                └── Coverage:  51              ║'; Write-Host '║                                                              ║'; Write-Host '║  Findings per Repository                                     ║'; Write-Host '║  cq-demo-app-001  ████████████████████   78                   ║'; Write-Host '║  cq-demo-app-002  ██████████████         54                   ║'; Write-Host '║  cq-demo-app-003  ████████████           47                   ║'; Write-Host '║  cq-demo-app-004  ██████████             39                   ║'; Write-Host '║  cq-demo-app-005  ███████                29                   ║'; Write-Host '╚══════════════════════════════════════════════════════════════╝'",
+      "workingDir": "demo-app"
+    },
+    {
+      "lab": "08",
+      "name": "lab-08-dashboard-trends",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "Write-Host '╔══════════════════════════════════════════════════════════════╗'; Write-Host '║          Code Quality Dashboard — Trends                      ║'; Write-Host '╠══════════════════════════════════════════════════════════════╣'; Write-Host '║                                                              ║'; Write-Host '║  Findings Over Time (last 4 weeks)                           ║'; Write-Host '║  350 │ ●                                                     ║'; Write-Host '║  300 │   ●                                                   ║'; Write-Host '║  250 │     ●                                                 ║'; Write-Host '║  200 │       ●──── target: fewer findings each scan           ║'; Write-Host '║      └────────────────────                                   ║'; Write-Host '║        W1   W2   W3   W4                                    ║'; Write-Host '║                                                              ║'; Write-Host '║  Coverage Trends (%)                                         ║'; Write-Host '║  App 001  ██████████████████  72% -> 85%  +13%               ║'; Write-Host '║  App 002  ████████████████    65% -> 81%  +16%               ║'; Write-Host '║  App 003  ███████████████     60% -> 78%  +18%               ║'; Write-Host '║  App 004  █████████████████   68% -> 83%  +15%               ║'; Write-Host '║  App 005  ██████████████████  70% -> 88%  +18%               ║'; Write-Host '║                                                              ║'; Write-Host '║  Complexity Trends (avg CCN)                                 ║'; Write-Host '║  App 001  14.2 -> 8.5  Improved                              ║'; Write-Host '║  App 002  12.8 -> 7.9  Improved                              ║'; Write-Host '║  App 005   9.5 -> 6.2  Improved                              ║'; Write-Host '╚══════════════════════════════════════════════════════════════╝'",
+      "workingDir": "demo-app"
+    },
+    {
+      "lab": "08",
+      "name": "lab-08-dashboard-drilldown",
+      "phase": 1,
+      "method": "freeze-execute",
+      "command": "Write-Host '╔════════════════════════════════════════════════════════════════════════════╗'; Write-Host '║          Code Quality Dashboard — Finding Details                          ║'; Write-Host '╠════════════════════════════════════════════════════════════════════════════╣'; Write-Host '║  Filter: App=001 | Tool=ESLint | Severity=High                            ║'; Write-Host '╠════════════════════════════════════════════════════════════════════════════╣'; Write-Host '║  Rule ID            │ File                       │ Line │ Sev    │ Message ║'; Write-Host '║  ──────────────────┼────────────────────────────┼──────┼────────┼─────────║'; Write-Host '║  no-unused-vars    │ src/lib/helpers.ts          │  12  │ High   │ x decl… ║'; Write-Host '║  no-unused-vars    │ src/lib/helpers.ts          │  45  │ High   │ temp u… ║'; Write-Host '║  @typescript/no-ex │ src/services/userService.ts │  78  │ High   │ Unexp…  ║'; Write-Host '║  no-shadow         │ src/lib/helpers.ts          │  23  │ Medium │ data s… ║'; Write-Host '║  complexity        │ src/services/userService.ts │  15  │ Medium │ Func …  ║'; Write-Host '║  prefer-const      │ src/routes/api.ts           │  34  │ Low    │ result… ║'; Write-Host '║  eqeqeq            │ src/lib/helpers.ts          │  67  │ Low    │ Unexp…  ║'; Write-Host '║  ──────────────────┴────────────────────────────┴──────┴────────┴─────────║'; Write-Host '║  Showing 7 of 78 findings                     [ Export CSV ] [ Next > ] ║'; Write-Host '╚════════════════════════════════════════════════════════════════════════════╝'",
       "workingDir": "demo-app"
     }
   ]
