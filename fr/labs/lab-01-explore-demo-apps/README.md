@@ -1,4 +1,5 @@
 ---
+nav_exclude: true
 permalink: /fr/labs/lab-01-explore-demo-apps/
 title: "Lab 01 : Explorer les applications de démonstration"
 description: "Parcourir les 5 applications de démonstration, comprendre leurs violations intentionnelles et exécuter chaque application localement avec Docker."

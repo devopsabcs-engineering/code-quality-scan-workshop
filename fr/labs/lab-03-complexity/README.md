@@ -1,4 +1,5 @@
 ---
+nav_exclude: true
 permalink: /fr/labs/lab-03-complexity/
 title: "Lab 03 : Analyse de complexité"
 description: "Analyser la complexité cyclomatique dans les 5 applications de démonstration à l'aide de Lizard et convertir les résultats au format SARIF."

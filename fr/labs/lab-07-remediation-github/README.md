@@ -1,4 +1,5 @@
 ---
+nav_exclude: true
 permalink: /fr/labs/lab-07-remediation-github/
 title: "Lab 07 : Remédiation (GitHub)"
 description: "Corriger les violations de qualité de code, réduire la complexité, ajouter des tests, extraire le code dupliqué et vérifier les améliorations avec une nouvelle analyse."

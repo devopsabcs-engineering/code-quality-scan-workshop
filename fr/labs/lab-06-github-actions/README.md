@@ -1,4 +1,5 @@
 ---
+nav_exclude: true
 permalink: /fr/labs/lab-06-github-actions/
 title: "Lab 06 : GitHub Actions CI/CD"
 description: "Explorez le workflow code-quality-scan.yml, exécutez-le via GitHub Actions et consultez les résultats SARIF dans l'onglet GitHub Security."

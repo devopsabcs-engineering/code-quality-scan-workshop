@@ -1,4 +1,5 @@
 ---
+nav_exclude: true
 permalink: /fr/labs/lab-06-ado-pipelines/
 title: "Lab 06-ADO : Pipelines ADO CI/CD"
 description: "Importer le pipeline code-quality-scan.yml dans Azure DevOps, l'exécuter et consulter les résultats dans ADO Advanced Security."

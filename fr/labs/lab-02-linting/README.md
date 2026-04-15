@@ -1,4 +1,5 @@
 ---
+nav_exclude: true
 permalink: /fr/labs/lab-02-linting/
 title: "Lab 02 : Analyse de lint"
 description: "Exécuter des linters par langage sur les 5 applications de démonstration et comprendre le format de sortie SARIF pour les résultats de qualité du code."

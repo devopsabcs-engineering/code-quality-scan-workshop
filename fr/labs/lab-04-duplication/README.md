@@ -1,4 +1,5 @@
 ---
+nav_exclude: true
 permalink: /fr/labs/lab-04-duplication/
 title: "Lab 04 : Détection de duplication"
 description: "Détecter la duplication de code dans la base de code à l'aide de jscpd et configurer les seuils de détection."

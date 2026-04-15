@@ -1,4 +1,5 @@
 ---
+nav_exclude: true
 permalink: /fr/labs/lab-00-prerequisites/
 title: "Lab 00 : Prérequis"
 description: "Installez tous les outils requis et vérifiez votre environnement de développement pour le Code Quality Scan Workshop."
