@@ -131,3 +131,12 @@ See [Lab 00: Prerequisites](labs/lab-00-prerequisites/) for detailed installatio
 3. Work through the labs in order — each lab builds on the previous one.
 
 > **Tip**: This workshop is designed for GitHub Codespaces. Click **Code → Codespaces → New codespace** to get a pre-configured environment with all tools installed.
+
+## Related Repositories
+
+| Repository | Description |
+|------------|-------------|
+| [Agentic Accelerator Framework](https://github.com/devopsabcs-engineering/agentic-accelerator-framework) | Agent definitions, instructions, skills, and CI/CD workflows |
+| [Agentic Accelerator Workshop](https://devopsabcs-engineering.github.io/agentic-accelerator-workshop/) | Hands-on workshop for AI-powered Accelerator agents |
+| [Accessibility Scan Workshop](https://devopsabcs-engineering.github.io/accessibility-scan-workshop/) | WCAG 2.2 accessibility scanning workshop |
+| [FinOps Scan Workshop](https://devopsabcs-engineering.github.io/finops-scan-workshop/) | Azure cost governance scanning workshop |
