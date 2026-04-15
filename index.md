@@ -5,6 +5,8 @@ nav_order: 0
 permalink: /
 ---
 
+> 🇫🇷 **[Version française](fr/)**
+
 <p align="center">
   <img src="assets/branding/logo-128.png" alt="Agentic Accelerator Framework" width="100">
 </p>
@@ -131,8 +133,6 @@ See [Lab 00: Prerequisites](labs/lab-00-prerequisites/) for detailed installatio
 3. Work through the labs in order — each lab builds on the previous one.
 
 > **Tip**: This workshop is designed for GitHub Codespaces. Click **Code → Codespaces → New codespace** to get a pre-configured environment with all tools installed.
-
-> 🇫🇷 **[Version française](fr/)**
 
 ## Related Repositories
 
