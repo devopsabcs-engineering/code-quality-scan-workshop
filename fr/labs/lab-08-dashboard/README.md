@@ -1,5 +1,6 @@
 ---
 nav_exclude: true
+lang: fr
 permalink: /fr/labs/lab-08-dashboard/
 title: "Lab 08 : Tableau de bord Power BI"
 description: "Déployer le rapport PBIP dans Power BI, configurer la source de données ADLS Gen2 et explorer les tableaux de bord de qualité."

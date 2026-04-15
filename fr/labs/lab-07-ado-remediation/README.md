@@ -1,5 +1,6 @@
 ---
 nav_exclude: true
+lang: fr
 permalink: /fr/labs/lab-07-ado-remediation/
 title: "Lab 07-ADO : Remédiation (ADO)"
 description: "Corriger les violations de qualité du code dans le dépôt ADO, relancer le pipeline ADO et vérifier la réduction des résultats dans ADO Advanced Security."

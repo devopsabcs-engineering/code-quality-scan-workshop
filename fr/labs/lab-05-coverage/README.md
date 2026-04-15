@@ -1,5 +1,6 @@
 ---
 nav_exclude: true
+lang: fr
 permalink: /fr/labs/lab-05-coverage/
 title: "Lab 05 : Analyse de couverture"
 description: "Exécutez les outils de couverture de tests pour chaque langage et convertissez les résultats au format SARIF pour un reporting unifié."
