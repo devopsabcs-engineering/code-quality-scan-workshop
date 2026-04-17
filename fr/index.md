@@ -144,3 +144,4 @@ Consultez le [Lab 00 : Prérequis](labs/lab-00-prerequisites/) pour les instruct
 | [Agentic Accelerator Workshop](https://devopsabcs-engineering.github.io/agentic-accelerator-workshop/) | Atelier pratique pour les agents Accelerator propulsés par l'IA |
 | [Accessibility Scan Workshop](https://devopsabcs-engineering.github.io/accessibility-scan-workshop/) | Atelier d'analyse d'accessibilité WCAG 2.2 |
 | [FinOps Scan Workshop](https://devopsabcs-engineering.github.io/finops-scan-workshop/) | Atelier d'analyse de la gouvernance des coûts Azure |
+| [APM Security Scan Workshop](https://devopsabcs-engineering.github.io/apm-security-scan-workshop/) | Atelier d'analyse de sécurité des fichiers de configuration d'agents |
